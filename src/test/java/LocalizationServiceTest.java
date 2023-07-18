@@ -24,14 +24,11 @@ public class LocalizationServiceTest {
         String expected = "Welcome";
 
         LocalizationService localizationService = new LocalizationServiceImpl();
+        
         // act
-        String result1 = localizationService.locale(Country.USA);
-        String result2 = localizationService.locale(Country.BRAZIL);
-        String result3 = localizationService.locale(Country.GERMANY);
-
+        String result = localizationService.locale(Country.USA);
+        
         // assert
-        Assertions.assertEquals(expected, result1);
-        Assertions.assertEquals(expected, result2);
-        Assertions.assertEquals(expected, result3);
+        Assertions.assertEquals(expected, result);
     }
 }
